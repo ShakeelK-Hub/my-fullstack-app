@@ -1,0 +1,37 @@
+###  all employees
+GET http://localhost:1290/api/employees
+
+
+### employees by department -> recording 4
+GET http://localhost:1290/api/employees?department=IT
+
+
+### add new employee 
+POST http://localhost:1290/api/employees
+Content-Type: application/json
+
+{
+  "name": "Jo",
+  "surname": "ree",
+  "gender": "Male",
+  "department": "hr",
+  "salary": 50000
+}
+
+
+###  update employee
+PUT http://localhost:1290/api/employees/67c9931074e7f1ae63b2f40a
+Content-Type: application/json
+
+{
+  "name": "Jane",
+  "surname": "Doe",
+  "gender": "Female",
+  "department": "HR",
+  "salary": 55000
+}
+
+### DELETE employee
+DELETE http://localhost:1290/api/employees/67c992ff74e7f1ae63b2f407
+
+
